@@ -22,6 +22,8 @@
 
         <header-file src="ios/MyRoiTrackingPlugin.h" />
         <source-file src="ios/MyRoiTrackingPlugin.m" />
+        
+        <framework src="src/ios/MyRoiTracking.framework" custom="true" />
 
     </platform>
 
