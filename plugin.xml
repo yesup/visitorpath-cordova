@@ -13,11 +13,20 @@
         <clobbers target="myroitracking" />
     </js-module>
 
+    <preference name="VISITORPATH_API_KEY" />
+    
+    <info>
+            In order to run this plugin, you need a API Key from visitor path.
+    </info>
+
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="MyRoiTracking">
                 <param name="ios-package" onload="true" value="MyRoiTrackingPlugin" />
             </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="VisitorPathApiKey">
+            <string>$VISITORPATH_API_KEY</string>
         </config-file>
 
         <header-file src="ios/MyRoiTrackingPlugin.h" />
@@ -39,6 +48,10 @@
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
             <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            
+            <meta-data
+              android:name="visitor_api_key"
+              android:value="$VISITORPATH_API_KEY" />
         </config-file>
         <source-file src="android/MyRoiTrackingCordovaPlugin.java" target-dir="src/com/yesup/myroitracking" />
         <source-file src="android/libMyroitracking-1.0.jar" target-dir="libs" />
