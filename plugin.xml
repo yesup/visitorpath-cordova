@@ -34,6 +34,7 @@
         
         <framework src="src/ios/MyRoiTracking.framework" custom="true" />
 
+        <framework src="CoreTelephony.framework" weak="true" />
     </platform>
 
     <platform name="android">
