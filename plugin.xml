@@ -50,7 +50,7 @@
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
             <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
         </config-file>
-        <config-file target="AndroidManifest.xml" parent="/application">
+        <config-file target="AndroidManifest.xml" parent="/*/application">
             <meta-data
               android:name="visitorpath_api_key"
               android:value="$VISITORPATH_API_KEY" />
